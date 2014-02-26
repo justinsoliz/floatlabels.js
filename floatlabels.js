@@ -73,9 +73,9 @@
                 this.inputPaddingTop    = parseFloat( thisElement.css('padding-top') ) + parseFloat(settings.paddingOffset);
 
                 thisElement.wrap('<div class="floatlabel-wrapper" style="position:relative"></div>');
-                thisElement.before('<label for="' + elementID + '" class="label-floatlabel ' + settings.labelClass + ' ' + extraClasses + '">' + floatingText + '</label>');
+                thisElement.after('<label for="' + elementID + '" class="label-floatlabel ' + settings.labelClass + ' ' + extraClasses + '">' + floatingText + '</label>');
 
-                this.$label = thisElement.prev('label');
+                this.$label = thisElement.next('label');
                 this.$label.css({
                     'position'                      : 'absolute',
                     'top'                           : settings.labelStartTop,
